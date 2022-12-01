@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <title>Calculadora de Impresión 3D</title>
+    </head>
+    <body>
+        <h1 class="title">Calculadora de impresión</h1>
+        <div class="flex space">
+            <div class="container consumo type">
+                <input
+                    type="number"
+                    name="consumo"
+                    id="consumo"
+                    class="input"
+                    min="0"
+                />
+            </div>
+            <div class="container precio-watt type">
+                <input
+                    type="number"
+                    name="precio-watt"
+                    id="precio-watt"
+                    class="input"
+                    min="0"
+                    step="0.001"
+                />
+            </div>
+            <div class="container duracion type">
+                <input
+                    type="number"
+                    name="tiempo"
+                    id="duracion"
+                    class="input"
+                    min="0"
+                />
+            </div>
+            <div class="container peso type">
+                <input
+                    type="number"
+                    name="peso"
+                    id="peso"
+                    class="input"
+                    min="0"
+                />
+            </div>
+            <div class="container precio-gr type">
+                <input
+                    type="number"
+                    name="precio-gr"
+                    id="precio-gr"
+                    class="input"
+                    min="0"
+                    step="0.1"
+                />
+            </div>
+        </div>
+        <button class="button" onclick="calculate()">Calcular</button>
+
+        <div class="flex center">
+            <p class="total">Total:</p>
+            <p class="result input" id="resultado"></p>
+        </div>
+        <div class="flex center">
+            <input
+                class="button margin"
+                type="text"
+                placeholder="Nombre"
+                id="name"
+            />
+            <button class="button margin" onclick="saveName()">
+                Guardar Producto
+            </button>
+        </div>
+        <ul id="items-list"></ul>
+
+        <div class="flex">
+            <button class="button" onclick="deleteAll()">Borrar todos</button>
+            <button class="button" onclick="deleteLast()">Borrar ultimo</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

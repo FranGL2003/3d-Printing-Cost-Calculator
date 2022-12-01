@@ -1,0 +1,141 @@
+:root {
+    --clr-blue-100: hsl(180, 33%, 77%);
+    --clr-blue-300: hsl(180, 33%, 55%);
+    --clr-blue-500: hsl(180, 100%, 25%);
+    --clr-blue-700: hsl(180, 100%, 20%);
+    --clr-blue-900: hsl(180, 100%, 15%);
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+}
+
+body {
+    background-color: var(--clr-blue-500);
+    padding: .5rem;
+    min-height: 100vh;
+}
+
+.title {
+    text-align: center;
+    background-color: var(--clr-blue-700);
+    padding: 2rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    box-shadow: 0px 1px var(--clr-blue-900);
+}
+
+.flex {
+    display: flex;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.space {
+    justify-content: space-around;
+}
+.container {
+    min-width: 150px;
+    max-width: 250px;
+    width: 100%;
+    position: relative;
+}
+
+.input {
+    width: 90%;
+    border: none;
+    background-color: var(--clr-blue-900);
+    text-align: center;
+    padding-left: 15px;
+    height: 60px;
+    font-size: 2em;
+    border-radius: 2px;
+    margin-bottom: 2rem;
+}
+
+.type::after{
+    height: 20px;
+    width: 20px; 
+    font-weight: 700;  
+    position: absolute;
+    bottom: 10px;
+    left: -5px;
+    width: 100%;
+    text-align: center;
+}
+
+.consumo::after {
+    content: "Consumo";
+}
+
+.precio-watt::after {
+    content: "Precio del watt";
+}
+
+.duracion::after {
+    content: "Tiempo (en minutos)";
+}
+
+.peso::after {
+    content: "Peso (en gramos)";
+}
+
+.precio-gr::after {
+    content: "Precio por gramo";
+}
+
+.button {
+    margin-inline: auto;
+    display: block;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--clr-blue-700);
+    font-weight: 900;
+    font-size: 2em;
+    padding: .5rem 3rem;
+    cursor: pointer;
+    margin-bottom: 3rem;
+}
+
+.calcular:hover {
+    background-color: var(--clr-blue-900);
+}
+
+.total {
+    font-size: 3rem;
+    margin-right: 1rem;
+    padding-top: .5rem;
+}
+
+.result {
+    max-width: 200px;
+    padding: 1rem 0 0 0;
+}
+
+.center {
+    justify-content: center;
+}
+
+.margin{
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+li {
+    width: 80%;
+    min-width: fit-content;
+    border: none;
+    background-color: var(--clr-blue-300);
+    text-align: center;
+    padding: 1rem;
+    min-height: 40px;
+    font-size: 2em;
+    border-radius: 30px;
+    margin-bottom: 2rem;
+    margin-inline: auto;
+    list-style-type: none;
+}
