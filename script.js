@@ -6,7 +6,7 @@ const precioGramo = document.getElementById('precio-gr');
 const nombre = document.getElementById('name')
 let resultado = document.getElementById('resultado');
 let itemsList = document.getElementById('items-list');
-let items = []
+let items = [];
 let duracionDecimal = 
 
 // Poner los ultimos valores apenas carga la página
@@ -17,6 +17,7 @@ precioGramo.value = localStorage.getItem('precioGramo')
 peso.value = localStorage.getItem('peso')
 
 items = JSON.parse(localStorage.getItem('productos'))
+
 renderItemsList()
 
 //Calcular el costo
@@ -35,7 +36,7 @@ function calculate () {
 //Guardar los productos
 function saveName() {
     if (nombre.value !== '' && resultado.innerText !== '') {
-        items.push({nombre: nombre.value, precio: resultado.innerText })
+        items.push({nombre: nombre.value, precio: resultado.innerText})
         localStorage.setItem('productos', JSON.stringify(items))
         renderItemsList()}
         else {
