@@ -6,7 +6,7 @@ const precioGramo = document.getElementById('precio-gr');
 const nombre = document.getElementById('name')
 let resultado = document.getElementById('resultado');
 let itemsList = document.getElementById('items-list');
-let items = []
+let items = [{}]
 let duracionDecimal = 
 
 // Poner los ultimos valores apenas carga la página
