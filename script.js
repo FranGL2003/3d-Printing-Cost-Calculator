@@ -16,7 +16,7 @@ duracion.value = localStorage.getItem('duracion')
 precioGramo.value = localStorage.getItem('precioGramo')
 peso.value = localStorage.getItem('peso')
 
-items = (JSON.parse(localStorage.getItem('productos')))
+items = JSON.parse(localStorage.getItem('productos'))
 renderItemsList()
 
 //Calcular el costo
